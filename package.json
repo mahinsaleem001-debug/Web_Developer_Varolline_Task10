@@ -1,0 +1,29 @@
+{
+  "name": "securenotes",
+  "version": "1.0.0",
+  "description": "SecureNotes: a small web app built to show XSS, CSRF and SQL injection protection, with tests and CI (Varolline Web Developer Task 10)",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node --test \"tests/unit/*.test.js\"",
+    "test:e2e": "playwright test",
+    "audit": "npm audit --audit-level=high",
+    "test:all": "npm test && npm run test:e2e"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^4.22.3",
+    "helmet": "^8.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22.13"
+  }
+}
